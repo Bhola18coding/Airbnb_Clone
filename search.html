@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="airbnb.svg">
+        <title>airbnb Listings</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+            <li class="start">
+                <img src="./assets/redlg.svg" alt="logo" class="logo">
+            </li>
+            <li class="mid">
+                <div class="search-cont">
+                    <ul class="info-search">
+                        <li id="loc" class="search-items">
+                            Location
+                        </li><span></span>
+                        <li id="date" class="search-items">
+                            Feb 19-26
+                        </li><span></span>
+                        <li id="guest" class="search-items">
+                            2 Guests
+                        </li>
+                        <li>
+                            <img id="search" src="./assets/Icon Button Base.png" alt="search">
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="end">
+                <ul class="end-cont">
+                    <li class="end-cont-items">
+                        Become a Host
+                    </li>
+                    <li class="end-cont-items">
+                        <img src="./assets/globe2.svg" alt="logo" class="logo">
+                    </li>
+                    <li class="end-cont-items">
+                        <div class="profile-btn">
+                            <img style="margin-right: 3px;" src="./assets/menu1.svg" alt="logo" class="logo">
+                            <img src="./assets/Avatar.png" alt="logo" class="logo">
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="wrapper">
+            <div class="filter">Price<i style="margin-left: 10px;" class="fa-solid fa-chevron-down"></i></div>
+            <div class="filter">Types of place<i style="margin-left: 10px;" class="fa-solid fa-chevron-down"></i></div>
+            <div class="filter">Free cancellation</div>
+            <div class="filter">Wifi</div>
+            <div class="filter">Kitchen</div>
+            <div class="filter">Air conditioning</div>
+            <div class="filter">Washer</div>
+            <div class="filter">Iron</div>
+            <!-- <div class="filter">Dedicated workspace</div> -->
+            <div class="filter">Free parking</div>
+            <div class="filter">Dryer</div>
+            <div style="display: flex; align-items: center;"  class="filter"><span>Filters</span> <img style="margin-left: 10px;" src="./assets/filter.svg" alt=""> </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="main-wrapper">
+            <div class="left">
+                <p style="padding-bottom: 0.5rem; border-bottom: 1px solid rgb(192, 192, 192); margin-bottom: 1rem; font-size: 0.8rem;">200+ stays in Somewhere</p>
+                <div class="stay-wrapper"></div>
+            </div>
+
+            <div class="right">
+                <div id='map'></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>

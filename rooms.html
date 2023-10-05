@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="airbnb.svg">
+    <title>airbnb Rooms</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="rooms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+            <li class="start">
+                <img src="./assets/redlg.svg" alt="logo" class="logo">
+            </li>
+            <li class="mid">
+                <div class="search-cont">
+                    <ul class="info-search">
+                        <li class="search-items">
+                            <input type="text" placeholder="Start your search">
+                        </li>
+                        <li>
+                            <img id="search" src="./assets/Icon Button Base.png" alt="search">
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="end">
+                <ul class="end-cont">
+                    <li class="end-cont-items">
+                        Become a Host
+                    </li>
+                    <li class="end-cont-items">
+                        <img src="./assets/globe2.svg" alt="logo" class="logo">
+                    </li>
+                    <li class="end-cont-items">
+                        <div class="profile-btn">
+                            <img style="margin-right: 3px;" src="./assets/menu1.svg" alt="logo" class="logo">
+                            <img src="./assets/Avatar.png" alt="logo" class="logo">
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1 id="title">Title</h1>
+        <div class="details">
+            <div class="ratings">
+                <p style="display: flex; align-items: center;">
+                    <img src="./assets/star.png" alt="rating">
+                    <span id="rating">5.0</span>
+                </p>
+                <p id="review" style="margin-bottom: 3px; border-bottom: 1px solid black;">
+                    13 reviews
+                </p>
+                <p id="isSupHost">
+                </p>
+                <p id="address">
+                    Kolkata, Westbengal
+                </p>
+            </div>
+            <p>
+                <span style="margin-right: 1rem;">
+                    <img src="./assets/share.png" alt="share">
+                    <span>Share</span>
+                </span>
+                <span>
+                    <i onclick="addColor(event)" style="color:black;" class="fa-regular fa-heart"></i>
+                    <span>Save</span>
+                </span>
+            </p>
+        </div>
+    </header>
+
+    <section class="hero">
+        
+    </section>
+
+   <main>
+    <div class="main-left">
+        <div class="main-title-cont">
+            <div class="title">
+                <div style="font-size: 1.5rem; font-weight: 600;" class="head">
+                    Entire rental unit hosted by Ghazal
+                </div>
+                <div class="left">
+                    <div>2 guests</div>
+                    <div>1 bedroom</div>
+                    <div>1 bed</div>
+                    <div>1 bath</div>
+                </div>
+            </div>
+            <div class="host-img">
+               <img class="host" src="https://a0.muscache.com/im/pictures/user/79cccbaa-3258-4379-b98d-a642587d63e7.jpg" alt="host"> 
+            </div>
+        </div>
+
+        <div class="main-details-cont">
+            <div class="room-details">
+                <div class="airbnb-data-detail">
+                  <img src="./assets/home.svg" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Entire home</div>
+                    <div class="subtitle">You’ll have the apartment to yourself</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                  <img src="./assets/sparkels.svg" alt="">              
+                  <div class="title-subtitle">
+                    <div class="title">Enhanced Clean</div>
+                    <div class="subtitle">This Host committed to Airbnb’s 5-step enhanced cleaning process. Show more.</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                  <img src="./assets/door.png" alt="">              
+                  <div class="title-subtitle">
+                    <div class="title">Self check-in</div>
+                    <div class="subtitle">Check yourself in with the keypad.</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                  <img src="./assets/calendar.svg" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Free cancellation before Feb 14</div>
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+
+        <div class="amenities">
+            <div class="amenities-head">What this place offers</div>
+            <div class="columns">
+              <div class="column">
+                <div class="airbnb-data-detail">
+                  <img src="./assets/leaf.svg" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Garden view</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                 <img src="./assets/wifi.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Wifi</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                  <img src="./assets/wash.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Free washer - in building</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                 <img src="./assets/ac.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Central air conditioning</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                  <img src="./assets/fridge.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Refrigerator</div>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="airbnb-data-detail">
+                  <img src="./assets/kitchen.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Kitchen</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                    <img src="./assets/pet.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Pets allowed</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                  <img src="./assets/dryer.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Dryer</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                  <img src="./assets/security.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Security cameras on property</div>
+                  </div>
+                </div>
+                <div class="airbnb-data-detail">
+                  <img src="./assets/bike.png" alt="">
+                  <div class="title-subtitle">
+                    <div class="title">Bicycles</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn">
+                Show all
+            </button>
+          </div>
+
+        <div class="host-wrapper">
+            <div class="host-cont">
+                <div class="host-header">
+                        <div class="host-img">
+                            <img class="host" src="https://a0.muscache.com/im/pictures/user/79cccbaa-3258-4379-b98d-a642587d63e7.jpg" alt="host"> 
+                        </div>
+                      <div class="title-subtitle">
+                        <div class="title">Hosted by Ghazal</div>
+                        <div class="subtitle">Joined May 2021</div>
+                      </div>
+                    </div>
+                    <div class="host-details">
+                      <div class="icon-text">
+                        <img src="./assets/star.png" alt="">
+                        <div class="text">12 Reviews</div>
+                      </div>
+                      <div class="icon-text">
+                        <img src="./assets/shield-tick.svg" alt="">
+                        <div class="text">Identity verified</div>
+                      </div>
+                      <div class="icon-text">
+                        <img src="./assets/badge.svg" alt="">
+                        <div class="text">Superhost</div>
+                      </div>
+                    </div>
+                  </div>                  
+            </div>
+            <div class="description">
+                <div style="font-size: 1.2rem; font-weight: 600; margin-top: 2rem;">Ghazal is a Superhost</div>
+                <div>
+                  Superhosts are experienced, highly rated hosts who are committed to
+                  providing great stays for guests.
+                </div>
+                <div class="response-rate-100">Response rate: 100%</div>
+                <div class="response-time-within-an-hour">Response time: within an hour</div>
+              </div>
+            <div>
+                <button class="btn">
+                    Contact host
+                </button>          
+            </div>
+            <div>
+                <div class="host-protection">
+                    <img src="./assets/Frame.svg" alt="">
+                    <p>
+                      To protect your payment, never transfer money or communicate outside of the
+                      Airbnb website or app.
+                    </p>
+                  </div>
+                  
+            </div>
+        </div>
+          
+    </div>
+    <div class="main-right">
+        <div class="booking-box">
+            <div class="header">
+              <div class="price-cont">
+                <div class="price"></div>
+              </div>
+              <div class="right">
+                    <div style="margin-right: 1rem;" class="icon-text">
+                    <img src="./assets/star.png" alt="">
+                    <div id="rate" class="ratings">5.0</div>
+                    </div>
+                    <div id="rev" class="reviews">7 reviews</div>
+              </div>
+            </div>
+            <button class="button">
+                Reserve
+            </button>
+            <div style="text-align: center; margin-bottom: 1rem;" class="you-won-t-be-charged-yet">You won’t be charged yet</div>
+            <div class="price-details">
+              <!-- <div class="row2">
+                <div class="tot-night">$79 x 7 nights</div>
+                <div class="tot-night-price">$555</div>
+              </div>
+              <div class="row2">
+                <div class="weekly-discount">Weekly discount</div>
+                <div class="weekly-discount-price">-$28</div>
+              </div>
+              <div class="row2">
+                <div class="cleaning-fee">Cleaning fee</div>
+                <div>$62</div>
+              </div>
+              <div class="row2">
+                <div class="service-fee">Service fee</div>
+                <div>$83</div>
+              </div>
+              <div class="row2">
+                <div class="occupancy-taxes-and-fees">Occupancy taxes and fees</div>
+                <div>$29</div>
+              </div>
+            </div> -->
+            <!-- <div class="row2">
+              <div class="total">Total</div>
+              <div id="tot">$701</div>
+            </div>
+          </div> -->
+          
+    </div>
+
+   </main> 
+   
+   <section>
+        <div class="map-cont">
+            <div id='map'></div>
+            <button style="margin: 2rem 0;">Navigate to there</button>
+        </div>
+
+   </section>
+   
+   <footer>
+    <div class="wrapper">
+        <div class="header-cont">
+            <h4 class="heading">Support</h4>
+            <h4 class="heading">Community</h4>
+            <h4 class="heading">Hosting</h4>
+            <h4 style="margin-right: 3rem;" class="heading">About</h4>
+        </div>
+        <div class="items-cont">
+            <div class="items">
+                <ul class="items-list">
+                    <li class="s-head">Help Center</li>
+                    <li class="s-head">Safety information</li>
+                    <li class="s-head">Cancellation options</li>
+                    <li class="s-head">Our COVID-19 Response</li>
+                    <li class="s-head">Supporting people with disabilities</li>
+                    <li class="s-head">Report a neighborhoood concern</li>
+                </ul>
+            </div>
+            <div class="items">
+                <ul class="items-list">
+                    <li class="s-head">Airbnb.org: disaster relief housing</li>
+                    <li class="s-head">Support: Afghan refugees</li>
+                    <li class="s-head">Celebrating diversity & belonging</li>
+                    <li class="s-head">Combating discriminatino</li>
+                <ul class="items-list"></ul>
+            </div>
+            <div class="items">
+                <ul class="items-list">
+                    <li class="s-head">Try hosting</li>
+                    <li class="s-head">AirCover: protection for Hosts</li>
+                    <li class="s-head">Explore hosting resources</li>
+                    <li class="s-head">Visit our community forum</li>
+                    <li class="s-head">How to host responsibly</li>
+                </ul>
+            </div>
+            <div class="items">
+                <ul class="items-list">
+                    <li class="s-head">Newsroom</li>
+                    <li class="s-head">Learn about new features</li>
+                    <li class="s-head">Letter from our founders</li>
+                    <li class="s-head">Careers</li>
+                    <li class="s-head">Investors</li>
+                    <li class="s-head">Airbnb Luxe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="lower-foot-cont">
+        <div class="l-foot-items">
+            <div>© 2022 Airbnb, Inc. &nbsp;&nbsp;&nbsp;|</div>
+            <div>&nbsp;&nbsp;&nbsp;Privacy&nbsp;&nbsp;&nbsp;|</div>
+            <div>&nbsp;&nbsp;&nbsp;Terms&nbsp;&nbsp;&nbsp;|</div>
+            <div>&nbsp;&nbsp;&nbsp;Sitemap</div>
+        </div>
+        <div class="l-foot-items">
+            <div class="l-foot-items">
+                <img src="./assets/globe.svg" alt="">
+                <span>English (US)</span>
+            </div>
+            <div class="l-foot-items">
+                <img src="./assets/dollar-2.png" alt="">
+                <span>English (US)</span>
+            </div>
+            <div class="l-foot-items">
+                <img src="./assets/Social Media.png" alt="">
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="rooms.js"></script>
+</body>
+</html>
